@@ -1,19 +1,22 @@
 import React from 'react'
-import {String} from 'prop-types'
-import {Container, Name, Description, Image} from './style'
+import {string} from 'prop-types'
+import {Container, Name, Category, Image, Description} from './style'
 
-function Producto(props) {
+function Producto(nombre, categoria, descripcion) {
   return (
     <Container>
-        <Name/>
-        <Description/>
-        <Image />
+      <Image src="https://i.discogs.com/jtlykYk336toKQUjrLIQNtGJaF0vVRn8ORrWRvDIUW0/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMTA4/MjMtMTMzNTcyODAx/Ni5wbmc.jpeg"/>
+        <Name>{nombre}</Name>
+        <Category>{categoria}</Category>
+        <Description>{descripcion}</Description>
     </Container>
   )
 }
 
 Producto.propTypes = {
-    nombre: String.isrequired,
+  nombre:string.isRequired,
+  categoria:string.isRequired,
+  descripcion:string.isRequired
 }
 
 export default Producto
