@@ -1,8 +1,9 @@
-import Producto from "./components/producto";
+import Glosario from "./components/tp6/Glosario"
 
 function App() {
   return (
-    <Producto/>
+    <Glosario/>
+    
   );
 }
 
